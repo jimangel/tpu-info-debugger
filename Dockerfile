@@ -1,5 +1,6 @@
-# Use a Python 3.12 slim image, which is based on Debian and includes apt
-FROM python:3.12-slim-bookworm
+# Use a Python slim image, which is based on Debian and includes apt
+# 3.12 has issues with libtpu
+FROM python:3.11-slim-bookworm
 
 # Install git, which is required by pip to install directly from a git repository
 RUN apt-get update && \
